@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.container-main {
+  min-height: 85vh;
+}
+
+/* TITLE */
+.title {
+  color: #042B61;
+  text-align: left;
+  padding: 2rem 0;
+  padding-left: 2%;
+}
+
+.title>h1 {
+  font-size: 3.5rem;
+  font-weight: 1;
+}
+
+/* LAYOUT CARDS */
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: .5fr .5fr .5fr;
+  gap: 2rem;
+  padding: 0 2rem;
+  width: 80%;
+  
+}
+
+.layout-cards {
+  border: 2px solid #042B61;
+  border-radius: 5px;
+  transition: all .3s linear;
+
+}
+
+.layout-cards>p {
+  border-radius: px;
+  background-color: #042B61;
+  text-align: center;
+  font-size: 120%;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-transform: capitalize;
+  
+}
+
+
+.layout-dragging {
+  background: #ffffff17;
+  border: 2px dashed #ffffff8c;
+}
+
+/* SINGLE CARD */
+.card-container {
+  margin: 1rem 1rem 0 1rem;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 5px;
+  padding: 2rem;
+  cursor: pointer;
+  animation: fadeIn .3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Boton Flotante */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007B62;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.floating-button i {
+  font-size: 20px;
+}
+
+/*Ventana Emergente*/
+.popup {
+  position: fixed;
+  color: #042B61;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  padding: 35px;
+}
+
+h2{
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+button.disabled {
+  background-color: #ccc; /* color de fondo gris */
+  color: #666; /* color de texto gris oscuro */
+  cursor: not-allowed; /* cambia el cursor del mouse a "no permitido" */
+}
+
+.buttons{
+  margin-top: 5%;
+}
+
+.btn-close{
+  margin-left: 10px;
+	background: #e92b2d;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	transition: .3s ease all;
+}
+
+.btn-close:hover{
+  background-color: #941a1c;
+}
+
+.form {
+	min-width: 600px;
+	background: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.form > div {
+	margin-bottom: 20px;
+}
+
+.form label {
+	display: block;
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.formnewemployee{
+  width: 20%;
+}
+
+.form input,
+.form textarea {
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	border-radius: 5px;
+	border: 2px solid #e2e2e2;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #1f1f1f;
+}
+
+.form input:focus {
+	outline: none;
+	border: 2px solid #042B61;
+}
+
+.form .error {
+	color: #e92b2d;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.form button[type="submit"] {
+
+	background: #009c7d;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	transition: .3s ease all;
+}
+
+.form button[type="submit"]:hover {
+	background: #005f4c;
+}
+
+.form .exito {
+	text-align: center;
+	font-size: 14px;
+	padding-top: 20px;
+	color: #02a802;
+}
+
+.form input[type="radio"] {
+	width: auto;
+}
+
+.dropdown-select {
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.dropdown-selectAdd {
+  margin-left: 10px;
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dropdown-select:focus{
+  outline: none;
+	border: 2px solid #042B61;
+}
+
+.dropdown-selectAdd:focus{
+  outline: none;
+	border: 2px solid #042B61;
+}
+
+.dropdown-select option {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.navbar{
+  font-size: 2rem;
+  font-weight: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-add{
+  padding-top: 40%;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.btn-delate{
+  margin-left: 10%;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.card-container>p {
+  font-weight:normal;
+  font-size:4;
+  color: #042B61;
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .layout-cards {
+    overflow-y: scroll;
+    height: 250px;
+    min-height: 150px;
+    max-height: 250px;
+  }
+}
